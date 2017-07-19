@@ -9,31 +9,26 @@ export class AppComponent {
   title = 'app';
   value: number;
   prime: string;
-  calculated = false;
+  calculated: boolean;
 
-  // prime number checker function
+  // prime number checker
   primeNumber(){
   	this.calculated = true;
   	if(this.value){
   		if ( this.value == 1 || this.value == 2 ) {
-				console.log("prime");
-				this.prime = "Prime";
+				this.prime = "prime";
 			}
-
 			for (var i = 2; i < this.value; i++ ) {
 				if ( this.value % i == 0 ) {
-					console.log("not prime");
-					this.prime = "Not a Prime";
+					this.prime = "not a Prime";
 					break;
 				}
 				else
 				{
-					console.log("prime");
-					this.prime = "Prime";
+					this.prime = "prime";
 					break;
 				}
-				
-			} 
+			}
   	}
   }
 }
